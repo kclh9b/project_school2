@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jspweb0_</title>
+<link rel="stylesheet" href="css/style.css"></link>
+<style type = "text/css"></style>
+</head>
+<body>
+
+<h3>제목</h3>
+	<table>
+		<tr>
+			<td>
+				<a href="javascript:void(0)" onclick="clicks(event)">sdvwrgrg</a>
+			</td>
+		</tr>
+		<tr style="display:none;">
+			<td>asd</td>
+		</tr>
+	</table>
+<script src="js/jquery-3.6.0.min.js"></script> <!--사용하지 않으면 주석을 막을것 -->
+<script>
+	function clicks(event) {
+		var row = event.target.parentNode.parentNode.nextSibling;
+		var row2 = row.nextSibling;
+		alert(row2);
+		row2.style.display="table-row";
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-ｅquiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
+
+<style type="text/css">
+ #popup{
+  position: absolute;
+  width : 300px;
+  height : 300px;
+  top : 25px;
+  left : 15px;
+  border : 3px solid Red;
+  background: yellow;
+ }
+ 
+ #view {
+  width : 296px;
+  height : 270px;
+  border : 1px solid black;
+ }
+</style>
+
+<script type="text/javascript">
+ window.btn1 = function() {
+  popup = document.createElement("div");
+  iframe = document.createElement("iframe");
+  closeBtn = document.createElement("button");
+
+  iframe.src = "http://www.apple.com";
+  iframe.id = "view";
+  popup.id = "popup";
+  closeBtn.innerHTML = "닫기";
+
+  popup.appendChild(iframe);
+  popup.appendChild(closeBtn);
+  document.body.appendChild(popup);
+
+  closeBtn.onclick = function() {
+   document.body.removeChild(popup);
+  }
+ };
+</script>
+
+</head>
+<body>
+ <button id="btn" onclick="btn1()">팝업 메세지 보기</button>
+<a href="test.html" style="{color: blue; background: white} 
+            :visited {color: green}
+            :hover {color: yellow}
+            :visited:hover {color: purple}">Test</a>
+<a href="" style="{color: blue; background: white} 
+            :visited {color: green}
+            :hover {color: yellow}
+            :visited:hover {color: purple}">ddddd</a>
+</body>
+</html>
